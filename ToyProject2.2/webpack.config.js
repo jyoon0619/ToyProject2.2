@@ -1,10 +1,12 @@
-﻿
-var path = require('path')
+﻿var path = require('path')
 var webpack = require('webpack')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { pathsToClean } = ['dist'];
+const { cleanOptions } = { root: __dirname, verbose: true, dry: false, exclude: [], };
 
 module.exports = {
     entry: {
-        main: './ClientApp/main.js'
+        main: './Views/Home/index.cshtml.js'
     },
 
   output: {
@@ -94,7 +96,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
+   http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
@@ -109,6 +111,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+      new webpack.CleanWebpackPlugin(pathsToClean, cleanOptions)
   ])
 }
