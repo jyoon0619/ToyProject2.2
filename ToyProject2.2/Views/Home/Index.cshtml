@@ -17,7 +17,7 @@
                       :schema-model-id="'ProductID'"
                       :schema-model-fields="schemaModelFields"
                       :batch='true'
-                      :page-size='10'
+                      :page-size='20'
                       :aggregate="aggregateDefinition">
     </kendo-datasource>
 
@@ -39,7 +39,7 @@
         <kendo-grid-column :field="'ProductName'"
                            :filterable-multi="true"
                            :filterable-search="true"
-                           :width="200"
+                           :width="300"
                            :attributes="{style: 'text-align: left'}"></kendo-grid-column>
 
         <kendo-grid-column :field="'UnitPrice'"
