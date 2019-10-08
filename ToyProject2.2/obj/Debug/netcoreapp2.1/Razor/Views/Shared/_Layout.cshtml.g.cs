@@ -54,7 +54,7 @@ using ToyProject2._2.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 286, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "804aaa1c37f849f598426dbf66ae9b9f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63f8278a4d354b05bf2ce8c62c83c634", async() => {
                 BeginContext(31, 136, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <link rel=\"stylesheet\"");
                 EndContext();
@@ -92,7 +92,7 @@ using ToyProject2._2.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(313, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc0e40f1855a4eb19bc4379d01fb345f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad839b7ad4c141daa23ac2c4d6c1f382", async() => {
                 BeginContext(319, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
