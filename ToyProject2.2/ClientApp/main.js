@@ -2,10 +2,13 @@
 import '@progress/kendo-ui';
 import { DataSource, HierarchicalDataSource, GanttDataSource, GanttDependencyDataSource, PivotDataSource, SchedulerDataSource, TreeListDataSource, DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper';
 import { Grid, GridColumn, GridInstaller } from '@progress/kendo-grid-vue-wrapper';
-import JSZip from 'jszip';
+import JSZip from 'jszip'
+import $ from 'jquery';
+import '@progress/kendo-vue-excel-export';
 
 Vue.use(GridInstaller);
 Vue.use(DataSourceInstaller);
+window.JSZip = JSZip
 
 new Vue({
     el: '#vueapp',
