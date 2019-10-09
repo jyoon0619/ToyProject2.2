@@ -41,3 +41,4 @@ C:\Users\user\source\repos\ToyProject2.2\ToyProject2.2\obj\Debug\netcoreapp2.1\R
 C:\Users\user\source\repos\ToyProject2.2\ToyProject2.2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\user\source\repos\ToyProject2.2\ToyProject2.2\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\user\source\repos\ToyProject2.2\ToyProject2.2\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\user\source\repos\ToyProject2.2\ToyProject2.2\bin\Debug\netcoreapp2.1\stats.json
