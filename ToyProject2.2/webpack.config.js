@@ -1,22 +1,18 @@
-﻿/// <binding BeforeBuild='Run - Production, Profile - Development' Clean='Profile - Production' />
+﻿/// <binding BeforeBuild='Run - Production' Clean='Profile - Production' />
+/// <reference path="wwwroot/js/views/home/index.cshtml.js" />
+
 "use strict";
 
 const path = require('path');
 const webpack = require('webpack');
 var fs = require('fs');
 var projectRoot = path.resolve(__dirname);
+const {UglifyJsPlugin} = require('uglifyjs-webpack-plugin');
+const { MinifyPlugin }= require("babel-minify-webpack-plugin");
 
 
 module.exports = {
-    //entry: {
-    //    app: './wwwroot/js/site.js',
-    //    HelloWorld: './Views/Home/HelloWorld.cshtml.js',
-    //    EmployeeIndex: './Views/Home/EmployeeIndex.cshtml.js',
-    //    PagesIndex: './Views/Pages/Index.cshtml.js',
-    //    PagesCustomerList: './Views/Pages/CustomerList.cshtml.js',
-    //    PagesCustomerDetail: './Views/Pages/CustomerDetail.cshtml.js',
-    //    PagesSalesOrderList: './Views/Pages/SalesOrderList.cshtml.js'
-    //},
+
     entry: () => {
 
         const ENTRYCONTAINER = "./Views";
@@ -69,17 +65,22 @@ module.exports = {
             axios: 'axios',
             numbro: 'numbro'
         }),
+
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            uglifyOptions: {
+                compress: {}
+            }
+          }),
     ],
+
+
     output: {
         publicPath: "./",
         path: path.join(__dirname, '/wwwroot/js/'),
         filename: '[name].js'
     },
-    //optimization: {
-    //    splitChunks: {
-    //        chunks: 'all',
-    //    },
-    //},
+
     module: {
         rules: [
             {
@@ -106,8 +107,8 @@ module.exports = {
                 test: /\.(png)$/i,
                 loader: 'file-loader',
                 options: {
-                    outputPath: '../images/pkg/',   // image path
-                    publicPath: '/images/pkg/',   // css path
+                    outputPath: '../images/pkg/',   
+                    publicPath: '/images/pkg/',   
                     useRelativePaths: false
                 }
             },
@@ -122,7 +123,7 @@ module.exports = {
                                 progressive: true,
                                 quality: 65
                             },
-                            // optipng.enabled: false will disable optipng
+                            
                             optipng: {
                                 enabled: false,
                             },
@@ -133,7 +134,7 @@ module.exports = {
                             gifsicle: {
                                 interlaced: false,
                             },
-                            // the webp option will enable WEBP
+                      
                             webp: {
                                 quality: 75
                             }
@@ -147,12 +148,7 @@ module.exports = {
                 options: {
                     limit: 50000,
                     mimetype: 'application/font-woff',
-
-                    // Output below the fonts directory
                     name: './fonts/[name].[ext]',
-
-                    // Tweak publicPath to fix CSS lookups to take
-                    // the directory into account.
                     publicPath: '../',
                 }
             },
@@ -172,7 +168,6 @@ module.exports = {
     },
     resolve: {
         alias: {
-            //vue: 'vue/dist/vue.js'
             vue: 'vue/dist/vue.min.js',
             'kendo': '@progress/kendo-ui/js/',
             'kendo': '@progress/kendo-theme-default'
