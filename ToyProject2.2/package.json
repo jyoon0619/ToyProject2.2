@@ -16,7 +16,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "razor-partial-views-webpack-plugin": "^1.1.0",
     "vue": "^2.5.11"
   },
